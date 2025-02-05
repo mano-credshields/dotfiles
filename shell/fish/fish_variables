@@ -7,20 +7,7 @@ SETUVAR --export GOBIN:/Users/manosriram/go/bin
 SETUVAR --export GOPATH:/Users/manosriram/go
 SETUVAR --export GOROOT:/usr/local/go
 SETUVAR --export HOMEBREW_NO_AUTO_UPDATE:1
-
-# This file contains the initial defaults for go command configuration.
-# Values set by 'go env -w' and written to the user's go/env file override these.
-# The environment overrides everything else.
-
-# Use the Go module mirror and checksum database by default.
-# See https://proxy.golang.org for details.
-SETUVAR --export GOPROXY:https://proxy.golang.org,direct
-SETUVAR --export GOSUMDB:sum.golang.org
-
-# Automatically download newer toolchains as directed by go.mod files.
-# See https://go.dev/doc/toolchain for details.
-SETUVAR --export GOTOOLCHAIN:auto
-
+SETUVAR --export SONAR_TOKEN:sqa_9a67b1617e3781ecf3dd4066ee72320146c0bc70
 SETUVAR LDFLAGS:\x2dL/opt/homebrew/opt/llvm/lib
 SETUVAR PATH:/opt/homebrew/opt/llvm/bin\x3a\x24PATH
 SETUVAR TERM:screen\x2d256color
@@ -55,4 +42,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Users/manosriram/\x2elocal/bin\x1e/Users/manosriram/\x2ecargo/bin\x1e/opt/homebrew/opt/llvm/bin\x1e/usr/local/go/bin\x1e/Users/manosriram/go/bin\x1e/Users/manosriram/go\x1e/opt/homebrew/bin\x1e/usr/local/bin
+SETUVAR fish_user_paths:/Users/manosriram/\x2elocal/bin\x1e/Users/manosriram/\x2ecargo/bin\x1e/opt/homebrew/opt/llvm/bin\x1e/usr/local/go/bin\x1e/Users/manosriram/go/bin\x1e/Users/manosriram/go\x1e/opt/homebrew/bin

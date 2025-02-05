@@ -12,7 +12,6 @@ set -g fish_color_autosuggestion white
 
 fish_add_path $GOPATH
 fish_add_path $GOROOT/bin
-fish_add_path /usr/local/bin/
 fish_add_path /opt/homebrew/bin/
 fish_add_path /Users/manosriram/.local/bin
 fish_add_path /opt/homebrew/opt/llvm/bin
@@ -24,10 +23,6 @@ end
 
 function tmux_kill_all_sessions
     pkill -f tmux;
-end
-
-function tmux_kill_session_by_id
-		tmux kill-session -t $argv
 end
 
 function git_checkout
@@ -50,9 +45,13 @@ function git_pull
     git pull origin $argv;
 end
 
+function grep_shell_history
+		history | grep "$argv";
+end
+
 abbr -a tmx tmux
 abbr -a tls "tmux ls"
-abbr -a tk tmux_kill_session_by_id
+abbr -a tk "tmux kill-server"
 abbr -a ta tmux_attach
 abbr -a tx "exit"
 abbr -a tka tmux_kill_all_sessions
@@ -67,5 +66,8 @@ abbr -a gitchn git_checkout_to_new_branch
 abbr -a gc git_commit
 abbr -a gps git_push
 abbr -a gpl git_pull
+abbr -a ngl "nvim -c \"G log\""
+
+abbr -a gsh grep_shell_history
 
 abbr -a k "kubectl"
